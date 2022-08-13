@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/b67e368fa6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <title>Toko Buah</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="navbar">
-        <img src="./assets/images/logo.png" alt="">
-        <ul>
-            <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
-            <li></li><a href="product.html"><i class="fa fa-fw fa-box"></i> Product</a>
-            <li></li><a href="checkout.html"><i class="fa fa-fw fa-shopping-cart"></i> CheckOut</a>
-            <li></li><a href="tentang-kami.html"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
-            <li></li><a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
-        </ul>
+      <a href="index.html"><i class="bi bi-5-square-fill"></i> M Five</a>
+      <div class="navbar-right">
+        <a class="active" href="index.html"><i class="bi bi-house-door">Home</i></a>
+        <a href="product.html"><i class="bi bi-cart"> Product</i></a>
+        <a href="#"><i class="bi bi-bag-check">CheckOut</i></a>
+        <a href="tentang-kami.html"><i class="bi bi-person-lines-fill"> Contact</i></a>
+        <a href="login.html"><i class="bi bi-person-circle"> Login</i></a>
+      </div>
     </div>
     <div>
-        <h1>manggis</h1>
-        <button onclick="addProduct({
+      <h1>manggis</h1>
+      <button
+        onclick="addProduct({
              name:`manggis`,
             stok: 2,
             harga: 20000,
             image: './assets/images/manggis.jpg'
-        })">CheckOut</button>
+        })"
+      >
+        CheckOut
+      </button>
     </div>
-    
+
     <script>
-        const cart = {}
+      const cart = {};
 
-        const addProduct = (product) => {
-            console.log('cart before add product')
-            console.log(cart)
-            console.log("=======================")
+      const addProduct = (product) => {
+        console.log("cart before add product");
+        console.log(cart);
+        console.log("=======================");
 
-            const name = product.name;
-            const price = product.price;
-            const qty = product.qty;
+        const name = product.name;
+        const price = product.price;
+        const qty = product.qty;
 
-            cart[name] = {
-                price: price,
-                qty: qty
-            }
+        cart[name] = {
+          price: price,
+          qty: qty,
+        };
 
-            console.log('cart after add product')
-            console.log(cart)
-            console.log("=======================")
+        console.log("cart after add product");
+        console.log(cart);
+        console.log("=======================");
 
-            const stringifiedCart = JSON.stringify(cart)
-            console.log('stringifiedCart')
-            console.log(stringifiedCart)
-            console.log("=======================")
+        const stringifiedCart = JSON.stringify(cart);
+        console.log("stringifiedCart");
+        console.log(stringifiedCart);
+        console.log("=======================");
 
-            localStorage.setItem('cart', stringifiedCart)
-        }
+        localStorage.setItem("cart", stringifiedCart);
+      };
     </script>
-</body>
+  </body>
 </html>
