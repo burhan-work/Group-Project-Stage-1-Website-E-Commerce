@@ -3,7 +3,15 @@ Membuat *website e-commerce* untuk penjualan buah dan sayur.
 bisa diakses di desktop maupun mobile browser
 
 ## Struktur Anggota
-1. Ket
+1. Ketua : Febby Limas Sendelvant
+2. Anggota :
+
+    - Apriliano Peramu
+    - Burhanuddin
+    - Indah Storyna Heriati
+    - Irwan Tamami
+    - Muhammad Jalil Akbar
+    
 ## Daftar pembagian tugas:
 1. BRD
 
