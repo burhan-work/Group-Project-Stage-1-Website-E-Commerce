@@ -19,34 +19,10 @@ let food = [
     image: "./assets/images/kiwi.webp",
   },
   {
-    name: `Keju`,
-    stok: 80,
-    harga: 23000,
-    image: "./assets/images/7.jpeg",
-  },
-  {
-    name: `Jeruk`,
-    stok: 20,
-    harga: 18000,
-    image: "./assets/images/2.jpeg",
-  },
-  {
-    name: `Apel`,
-    stok: 12,
-    harga: 20000,
-    image: "./assets/images/9.jpeg",
-  },
-  {
     name: `Tomat`,
     stok: 20,
     harga: 2500,
     image: "./assets/images/1.jpeg",
-  },
-  {
-    name: `Susu UHT`,
-    stok: 20,
-    harga: 17000,
-    image: "./assets/images/3.jpeg",
   },
   {
     name: `Plum`,
@@ -71,6 +47,103 @@ let food = [
     stok: 20,
     harga: 9000,
     image: "./assets/images/8.jpeg",
+  },
+
+  {
+    name: `Melon`,
+    stok: 20,
+    harga: 22500,
+    image: "./assets/images/10.jpeg",
+  },
+  {
+    name: `Kedondong`,
+    stok: 20,
+    harga: 2000,
+    image: "./assets/images/11.jpeg",
+  },
+  {
+    name: `Oyong`,
+    stok: 30,
+    harga: 2000,
+    image: "./assets/images/12.jpeg",
+  },
+  {
+    name: `Pare`,
+    stok: 20,
+    harga: 2000,
+    image: "./assets/images/13.jpeg",
+  },
+  {
+    name: `Bawang Merah`,
+    stok: 20,
+    harga: 32000,
+    image: "./assets/images/14.jpeg",
+  },
+  {
+    name: `Kangkung`,
+    stok: 20,
+    harga: 2000,
+    image: "./assets/images/15.jpeg",
+  },
+  {
+    name: `Sawi`,
+    stok: 20,
+    harga: 4000,
+    image: "./assets/images/16.jpeg",
+  },
+  {
+    name: `Buncis`,
+    stok: 20,
+    harga: 2000,
+    image: "./assets/images/17.jpeg",
+  },
+  {
+    name: `Kacang Panjang`,
+    stok: 20,
+    harga: 2500,
+    image: "./assets/images/18.jpeg",
+  },
+  {
+    name: `Kelapa Muda`,
+    stok: 110,
+    harga: 5000,
+    image: "./assets/images/19.jpeg",
+  },
+  {
+    name: `Mangga Manalagi`,
+    stok: 70,
+    harga: 4000,
+    image: "./assets/images/20.jpeg",
+  },
+  {
+    name: `Strawberry`,
+    stok: 70,
+    harga: 12000,
+    image: "./assets/images/21.jpeg",
+  },
+  {
+    name: `Buah Naga`,
+    stok: 70,
+    harga: 10000,
+    image: "./assets/images/22.jpeg",
+  },
+  {
+    name: `Buah Nanas`,
+    stok: 50,
+    harga: 14000,
+    image: "./assets/images/23.jpeg",
+  },
+  {
+    name: `Jeruk`,
+    stok: 20,
+    harga: 18000,
+    image: "./assets/images/2.jpeg",
+  },
+  {
+    name: `Apel`,
+    stok: 12,
+    harga: 20000,
+    image: "./assets/images/9.jpeg",
   },
 ];
 

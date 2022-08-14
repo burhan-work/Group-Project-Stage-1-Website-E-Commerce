@@ -1,66 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b67e368fa6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- link bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <title>Toko Buah</title>
-  </head>
-  <body>
-    <div class="navbar">
-      <a href="index.html"><i class="bi bi-5-square-fill"></i> M Five</a>
-      <div class="navbar-right">
-        <a class="active" href="index.html"><i class="bi bi-house-door">Home</i></a>
+</head>
+<body>
+  
+  <div class="navbar">
+    <a href="index.html"><i class="bi bi-5-square-fill"></i> M Five</a>
+    <div class="navbar-right">
+        <a class="active" href="index.html"><i class="bi bi-house-door">Home</i></a> 
         <a href="product.html"><i class="bi bi-cart"> Product</i></a>
-        <a href="#"><i class="bi bi-bag-check">CheckOut</i></a>
-        <a href="tentang-kami.html"><i class="bi bi-person-lines-fill"> Contact</i></a>
-        <a href="login.html"><i class="bi bi-person-circle"> Login</i></a>
-      </div>
+        <a href="checkout.html"><i class="bi bi-bag-check">CheckOut</i></a>
+        <a href="tentang-kami.html"><i class="bi bi-person-lines-fill"> Contact</i></a> 
+        <!-- <a href="login.html"><i class="bi bi-person-circle"> Login</i></a> -->
     </div>
-    <div>
-      <h1>manggis</h1>
-      <button
-        onclick="addProduct({
-             name:`manggis`,
-            stok: 2,
-            harga: 20000,
-            image: './assets/images/manggis.jpg'
-        })"
-      >
-        CheckOut
-      </button>
-    </div>
+</div> 
+    <body id="checkout-page">
 
-    <script>
-      const cart = {};
-
-      const addProduct = (product) => {
-        console.log("cart before add product");
-        console.log(cart);
-        console.log("=======================");
-
-        const name = product.name;
-        const price = product.price;
-        const qty = product.qty;
-
-        cart[name] = {
-          price: price,
-          qty: qty,
-        };
-
-        console.log("cart after add product");
-        console.log(cart);
-        console.log("=======================");
-
-        const stringifiedCart = JSON.stringify(cart);
-        console.log("stringifiedCart");
-        console.log(stringifiedCart);
-        console.log("=======================");
-
-        localStorage.setItem("cart", stringifiedCart);
-      };
-    </script>
-  </body>
-</html>
+        <div id="site">
+            <header id="masthead">
+                <h1>konfirmasi Pembayaran<span class="tagline">Toko Buah</h1>
+            </header>
+            <div id="content">
+                
+                    <table id="checkout-cart" class="shopping-cart">
+                      <thead>
+                        <tr>
+                            <th scope="col">name</th>
+                            <th scope="col">images</th>
+                            <th scope="col">jumlah</th>
+                            <th scope="col">total</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      
+                      </tbody>
+                    </table>
+                 <div id="pricing">
+                    
+                    <p id="shipping">
+                        <strong>Shipping</strong>: <span id="sshipping"></span>
+                    </p>
+                    
+                    <p id="sub-total">
+                        <strong>Total</strong>: <span id="stotal"></span>
+                    </p>
+                 </div>
+                 
+                 <form action="order.html" method="post" id="checkout-order-form">
+                     <h2>Your Details</h2>
+                     
+                     <fieldset id="fieldset-billing">
+                         <legend>Billing</legend>
+                         <div>
+                             <label for="name">Name</label>
+                             <input type="text" name="name" id="name" data-type="string" data-message="This field cannot be empty" />
+                         </div>
+                         <div>
+                             <label for="email">Email</label>
+                             <input type="text" name="email" id="email" data-type="expression" data-message="Not a valid email address" />
+                         </div>
+                         <div>
+                             <label for="city">City</label>
+                             <input type="text" name="city" id="city" data-type="string" data-message="This field cannot be empty" />
+                         </div>
+                         <div>
+                             <label for="address">Address</label>
+                             <input type="text" name="address" id="address" data-type="string" data-message="This field cannot be empty" />
+                         </div>
+                         <div>
+                             <label for="country">Country</label>
+                             <select name="country" id="country" data-type="string" data-message="This field cannot be empty">
+                                 <option value="">Select</option>
+                                 <option value="Ml">Maluk</option>
+                                 <option value="BT">Benete</option>
+                                 <option value="SK">Sekongkang</option>
+                             </select>
+                         </div>
+                     </fieldset>
+                     
+                     <div id="shipping-same">Same as Billing <input type="checkbox" id="same-as-billing" value=""/></div>
+                     
+                     <fieldset id="fieldset-shipping">
+                         
+                         <legend>Shipping</legend>
+                         
+                         <div>
+                             <label for="sname">Name</label>
+                             <input type="text" name="sname" id="sname" data-type="string" data-message="This field cannot be empty" />
+                         </div>
+                         <div>
+                             <label for="semail">Email</label>
+                             <input type="text" name="semail" id="semail" data-type="expression" data-message="Not a valid email address" />
+                         </div>
+                         <div>
+                             <label for="scity">City</label>
+                             <input type="text" name="scity" id="scity" data-type="string" data-message="This field cannot be empty" />
+                         </div>
+                         <div>
+                             <label for="saddress">Address</label>
+                             <input type="text" name="saddress" id="saddress" data-type="string" data-message="This field cannot be empty" />
+                         </div>
+                         <div>
+                             <label for="scountry">Village</label>
+                             <select name="scountry" id="scountry" data-type="string" data-message="This field cannot be empty">
+                                 <option value="">Select</option>
+                                 <option value="ML">Maluk</option>
+                                 <option value="BT">Benete</option>
+                                 <option value="SK">Sekongkang</option>
+                             </select>
+                         </div>
+                     </fieldset>
+                     
+                     <p><input type="submit" id="submit-order" value="Submit" class="btn" /></p>
+                 
+                 </form>
+            </div>
+            
+            
+        
+        </div>
+        
+    <footer id="site-info">
+        Copyright &copy; Web Project Grup5
+    </footer>
+        
+</body>
+</html>	
