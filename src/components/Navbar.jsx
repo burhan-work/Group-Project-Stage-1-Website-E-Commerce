@@ -8,7 +8,7 @@ const Navbar = () => {
     <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
             <div className="container">
-                <Link classNameName="navbar-brand fw-bold fs-4" to="/">
+                <Link className="navbar-brand fw-bold fs-4" to="/">
                     G-FIVE Mart
                 </Link>
                 <button 
@@ -45,13 +45,13 @@ const Navbar = () => {
                             </Link>
                         </li>
                     </ul>
-                    <div classNameName="buttons">
-                        <Link to="/login" classNameName="btn btn-outline-dark">
-                            <i classNameName="fa fa-sign-in me-1"></i>Login</Link>
-                        <Link to="/register" classNameName="btn btn-outline-dark ms-2">
-                            <i classNameName="fa fa-user-plus me-1"></i>Register</Link>
-                        <Link to="/cart" classNameName="btn btn-outline-dark ms-2">
-                            <i classNameName="fa fa-shopping-cart me-1"></i>Cart ({state.length})</Link>
+                    <div className="buttons">
+                        <Link to="/login" className="btn btn-outline-dark">
+                            <i className="fa fa-sign-in me-1"></i>Login</Link>
+                        <Link to="/register" className="btn btn-outline-dark ms-2">
+                            <i className="fa fa-user-plus me-1"></i>Register</Link>
+                        <Link to="/cart" className="btn btn-outline-dark ms-2">
+                            <i className="fa fa-shopping-cart me-1"></i>Cart ({state.length})</Link>
                     </div>
                 </div>
             </div>
