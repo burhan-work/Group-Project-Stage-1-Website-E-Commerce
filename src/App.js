@@ -1,13 +1,19 @@
-import { Navbar } from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import "./App.css";
 import Product from "./pages/Product";
+import {Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <>      
       <Navbar />
-      <Product />
-    </div>
+      <Routes>
+        {/* <Route path='/' element={<Home/>} /> */}
+        {/* <Route path='/about' element={<About/>} /> */}
+        <Route path='/product' element={<Product/>} />
+        {/* <Route path='/cart' element={<Cart/>} /> */}
+      </Routes>
+    </>
   );
 }
 
