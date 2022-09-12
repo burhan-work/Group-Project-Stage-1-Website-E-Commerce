@@ -5,7 +5,7 @@ import Login from './Login';
 function Register(props) {
     return (
         <div>
-            <div className="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div className="mask d-flex align-items-center h-100 gradient-custom-3 bg=info">
                 <div className="container h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">
                         <div className="col-12 col-md-9 col-lg-7 col-xl-6">

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import Register from '../pages/Register'
+import './LoginRegister.css'
 
 function Login(props) {
     return (
