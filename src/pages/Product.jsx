@@ -1,24 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   return (
     <div>
       <div className="navbar">
-        {/* <a href="index.html"> */}
-        <h2>
-          <img src="asset/MLogo.png" alt="logo" />
-        </h2>
-        {/* </a> */}
-
-        {/* <a href="cart.html"> */}
-        <div className="cart">
-          <i className="bi bi-basket"></i>
-          <div id="cartAmount" className="cartAmount">
-            0
+        <Link to="/cart">
+          <div className="cart">
+            <i className="bi bi-basket"></i>
+            <div id="cartAmount" className="cartAmount">
+              0
+            </div>
           </div>
-        </div>
-        {/* </a> */}
+        </Link>
       </div>
+
+      <div className="shop" id="shop"></div>
     </div>
   );
 };
