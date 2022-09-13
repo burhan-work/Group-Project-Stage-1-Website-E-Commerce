@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link, } from 'react-router-dom';
 
 
 function Login(props) {
@@ -31,6 +31,11 @@ function Login(props) {
                                     </div>
 
                                     <button className="btn btn-primary btn-lg btn-block" type="submit">LOGIN</button>
+
+                                    <hr className="my-4" />
+
+                                    <p>Don't have an account?</p>
+                                    <Link to="/Register">Register here</Link>
 
                                 </div>
                             </div>

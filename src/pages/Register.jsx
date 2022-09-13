@@ -1,11 +1,11 @@
 import React from 'react';
-
+import { Link, } from 'react-router-dom'
 
 
 function Register(props) {
     return (
         <div>
-            <section className="vh-100 ">
+            <section className="vh-100">
                 <div className="container py-5 h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">
                         <div className="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -30,6 +30,11 @@ function Register(props) {
                                     </div>
 
                                     <button className="btn btn-primary btn-lg btn-block" type="submit">SIGN UP</button>
+
+                                    <hr className="my-4" />
+
+                                    <p>Allready have an account?</p>
+                                    <Link to="/Register">Register here</Link>
 
                                 </div>
                             </div>
